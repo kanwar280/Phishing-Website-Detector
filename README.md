@@ -15,3 +15,5 @@ All features are extracted in main.py
 Here is main.py running in my local machine:
 
 <img width="837" alt="Screenshot 2024-05-22 at 3 17 43 AM" src="https://github.com/kanwar280/Phishing-Website-Detector/assets/67856691/57340152-8309-422a-a5d9-d40ce70f24e0">
+
+This program is easily uploadable to Amazon S3 bucket and build with codebuild, The Model can also be places inside an S3 bucket and used from there whenever needed.
