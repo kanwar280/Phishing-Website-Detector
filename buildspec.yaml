@@ -1,0 +1,23 @@
+version: 0.2
+
+env:
+  variables:
+    ENVIRONMENT: test
+    # Set other neccessary environment variables here
+    # These can also be set in AWS CodeBuild Console
+phases:
+  install:
+    runtime-versions:
+      python: 3.8
+    commands:
+      - python3 -m venv /root/venv
+      - . /root/venv/bin/activate
+      - pip3 install matplotlib && pip3 install scipy 
+      - pip3 install numpy && pip3 install xgboost
+  build:
+    commands:
+      - echo Running tests
+cache:
+  paths:
+    - '/root/venv/**/*'
+    - '/root/.cache/pip/**/*'
